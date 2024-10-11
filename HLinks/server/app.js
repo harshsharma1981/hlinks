@@ -24,7 +24,7 @@ var app = express();
 
 // view engine setup
 var corsOptions = {
-  origin: 'http://localhost:3001',
+  origin: 'https://hlinks.netlify.app',
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 app.use(express.json({ limit: '10mb' })); // Increase the limit to handle large images
