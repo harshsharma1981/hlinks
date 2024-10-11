@@ -18,7 +18,7 @@ const SendSocialData = require('./routes/SendSocialData');
 const ImageUpload = require('./routes/ImageUpload');
 
 const SendDashboardData = require('./routes/SendDashboardData');
-const RemoveSocialData = require('./routes/removeSocialData');
+const RemoveSocialData = require('./routes/RemoveSocialData');
 
 var app = express();
 
