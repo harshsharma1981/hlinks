@@ -13,11 +13,11 @@ Receive_social.post('/', async function(req, res, next) {
 const username=req.username
 const vanity = await SocialLinks.findOne({vanityLink:vanityLink})
 if (vanity){
-  return res.status(400).json({ message: 'Already link name taken' });
+  return res.status(500).json({ success: false,message: 'Already link name taken' });
 
     
 if (!profileImage) {
-  return res.status(400).json({ message: 'No image provided' });
+  return res.status(500).json({ message: 'No image provided' });
 }
 const base64Image = profileImage.split(';base64,').pop();
 
