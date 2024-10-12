@@ -13,7 +13,7 @@ const SocialLinkSchema = new mongoose.Schema({
     {
       platform: { type: String, required: true },
       link: { type: String, required: true },
-      icon: { type: String, required: true },
+      icon: { type: String},
     },
   ],
   createdAt: { type: Date, default: Date.now },
