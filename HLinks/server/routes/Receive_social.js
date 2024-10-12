@@ -11,7 +11,11 @@ Receive_social.post('/', async function(req, res, next) {
   try {
     const { profileImage, name, shortTitle, vanityLink, socialLinks } = req.body;
 const username=req.username
+const vanity = await SocialLinks.findOne({vanityLink:vanityLink})
+if (vanity){
+  return res.status(400).json({ error: 'Already link name taken' });
 
+    
 if (!profileImage) {
   return res.status(400).json({ error: 'No image provided' });
 }
