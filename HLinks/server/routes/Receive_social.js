@@ -35,7 +35,7 @@ const result = await cloudinary.uploader.upload(`data:image/jpeg;base64,${base64
       });
   
       await newSocialLinks.save();
-      return res.status(201).json({ success: true,link:`http://localhost:3001/${vanityLink}`, imageUrl: result.secure_url , message: 'Social links saved successfully!' });
+      return res.status(201).json({ success: true,link:`https://hlinks.netlify.app/${vanityLink}`, imageUrl: result.secure_url , message: 'Social links saved successfully!' });
     } catch (error) {
     console.log(error);
       return res.status(500).json({ success: false, message: 'Error saving social links maybe you are trying to create 2nd page currently we provide only one page', error });
