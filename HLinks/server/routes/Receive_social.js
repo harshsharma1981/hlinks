@@ -17,7 +17,7 @@ if (vanity){
 
     
 if (!profileImage) {
-  return res.status(400).json({ error: 'No image provided' });
+  return res.status(400).json({ message: 'No image provided' });
 }
 const base64Image = profileImage.split(';base64,').pop();
 
