@@ -13,7 +13,7 @@ Receive_social.post('/', async function(req, res, next) {
 const username=req.username
 const vanity = await SocialLinks.findOne({vanityLink:vanityLink})
 if (vanity){
-  return res.status(400).json({ error: 'Already link name taken' });
+  return res.status(400).json({ message: 'Already link name taken' });
 
     
 if (!profileImage) {
