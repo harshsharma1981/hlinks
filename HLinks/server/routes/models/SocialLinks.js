@@ -16,6 +16,8 @@ const SocialLinkSchema = new mongoose.Schema({
       icon: { type: String},
     },
   ],
+      selectedTemplate :{ type: String, required: true },
+
   createdAt: { type: Date, default: Date.now },
 });
 
