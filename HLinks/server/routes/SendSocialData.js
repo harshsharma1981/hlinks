@@ -16,7 +16,7 @@ SendSocialData.get('/:vanityLink',async function(req, res, next) {
     const socialLinks = await SocialLinks.findOne({ vanityLink: req.params.vanityLink });
     
     if (!socialLinks) {
-console.log(req.params.vanityLink )
+console.log(req.params.vanityLink ,socialLinks)
       return res.status(404).json({ success: false, message: 'Social links not found' });
     }
 
