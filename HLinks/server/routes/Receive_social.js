@@ -12,7 +12,7 @@ cloudinary.config({
 
 Receive_social.post('/', async function (req, res, next) {
     try {
-        const { profileImage, name, shortTitle, vanityLink, socialLinks } = req.body;
+        const { profileImage, name, shortTitle, vanityLink, socialLinks,selectedTemplate } = req.body;
         const username = req.username;
 
         // Check if vanity link already exists
@@ -42,6 +42,7 @@ Receive_social.post('/', async function (req, res, next) {
             shortTitle,
             vanityLink,
             socialLinks,
+            selectedTemplate
         });
 
         await newSocialLinks.save();
