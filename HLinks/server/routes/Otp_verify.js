@@ -31,7 +31,7 @@ Otp_verify.post('/', async function(req, res, next) {
       const token = await newUser.generateAuthToken()
       res.send({status:"Successful Signup",token})
       // OTP is valid
-      res.status(200).json({ message: 'OTP verified. Account created!' });
+     
       await Otp.deleteOne({ email }); // Delete the OTP entry after successful verification
     } catch (error) {
     console.log(error)
