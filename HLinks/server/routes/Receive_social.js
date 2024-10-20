@@ -16,7 +16,7 @@ Receive_social.post('/', async function (req, res, next) {
         const username = req.username;
 
         // Check if vanity link already exists
-        const vanity = await SocialLinks.findOne({ vanityLink: vanityLink });
+        const vanity = await SocialLinks.findOne({ vanityLink:vanityLink.toLowerCase() });
         if (vanity) {
             return res.status(500).json({ success: false, message: 'Already link name taken' });
         }
