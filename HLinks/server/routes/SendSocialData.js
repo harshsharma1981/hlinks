@@ -13,7 +13,7 @@ SendSocialData.get('/:vanityLink',async function(req, res, next) {
 
   try {
 
-    const socialLinks = await SocialLinks.findOne({ vanityLink: req.params.vanityLink });
+    const socialLinks = await SocialLinks.findOne({ vanityLink: req.params.vanityLink.toLowerCase() });
     
     if (!socialLinks) {
 console.log(req.params.vanityLink ,socialLinks)
