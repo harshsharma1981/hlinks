@@ -40,7 +40,7 @@ Receive_social.post('/', async function (req, res, next) {
             profileImage: result.secure_url,
             name,
             shortTitle,
-            vanityLink,
+            vanityLink:vanityLink.toLowerCase(),
             socialLinks,
             selectedTemplate
         });
